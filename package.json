@@ -1,0 +1,23 @@
+{
+  "name": "02_web_maru_portafolio",
+  "version": "1.0.0",
+  "description": "Web Portfolio for Maru Bolatti",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbolattitorcasio/Web_MaruBolatti.git"
+  },
+  "author": "Juan Bolatti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbolattitorcasio/Web_MaruBolatti/issues"
+  },
+  "homepage": "https://github.com/jbolattitorcasio/Web_MaruBolatti#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6"
+  }
+}
