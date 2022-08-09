@@ -9,16 +9,16 @@ app.set('port', process.env.PORT || 3000);
 app.use(express.static(__dirname + '/public'));
 /* Routing */
 app.get('/', function (req, res) {
-    res.render('home');
+    res.render('home', { title: "Maru Bolatti - Produccion y Direccion", descrip: "Lorem xyz", robots: "index, follow" }); // Change description and update it and the robots to the others routs.
 });
 app.get('/direccion', function (req, res) {
-    res.render('director');
+    res.render('director', { title: "Maru Bolatti - Direccion" });
 });
 app.get('/produccion', function (req, res) {
-    res.render('producer');
+    res.render('producer', { title: "Maru Bolatti - Produccion" });
 });
 app.get('/contacto', function (req, res) {
-    res.render('contact');
+    res.render('contact', { title: "Contacto - Maru Bolatti" });
 });
 /* For errors */ 
 // custom 404 page
