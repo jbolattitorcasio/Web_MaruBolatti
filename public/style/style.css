@@ -1,0 +1,95 @@
+:root {
+    --color-main-blue: #0073c0;
+    --color-main-pink: #ff6364;
+    --color-gray: #dfdfdf;
+    --color-white: #fafafa;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+    margin: 0;
+    padding: 0;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+@font-face {
+    font-family: bahnschrift;
+    src:url("/fonts/bahnschrift.ttf");
+}
+body {
+    font-family: bahnschrift, helvetica;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+/** GLOBAL **/
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    max-width: 100%;
+}
+
+/** UTILITIES **/
+/* Usuals */
+.container {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+.display-none {
+    display: none;
+}
+/* Displays */
+.display-responsive {
+    display: none!important;
+}
+@media (min-width: 768px) {
+    .display-responsive {
+        display: inline-flex!important;
+    }
+}
+.display-responsive-reverse {
+    display: block;
+}
+@media (min-width: 768px) {
+    .display-responsive-reverse {
+        display: none;
+    }
+}
+
+/** FOOTER **/
+.footer a {
+    font-weight: 700;
+}
+.footer-content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3rem;
+}
+.footer-logo {
+    width: 10%;
+}
+.footer-line {
+    width: 25%;
+}
+@media (min-width: 768px) {
+    .footer {
+        width: 90%;
+    }
+    .footer-content {
+        justify-content: space-between;
+        font-size: 2.6rem;
+    }
+    .footer-logo {
+        width: 5%;
+    }
+    .footer-line {
+        width: 25%;
+    }
+}

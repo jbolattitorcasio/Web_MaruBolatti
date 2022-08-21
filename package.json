@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jbolattitorcasio/Web_MaruBolatti#readme",
   "dependencies": {
+    "dependencies": "^0.0.1",
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6"
   }
