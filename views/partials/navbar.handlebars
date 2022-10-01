@@ -1,3 +1,45 @@
-<header>
-    <a href="/" style="margin: 3rem;">Maru Bolatti... en Proceso</a>
+<header class="header">
+    <!-- Sidebar -->
+    <navbar class="sidebar" style="display: none;" id="sidebar">
+        <!-- Cambiar todo -->
+        <div class="sidebar-info">
+            <div class="sidebar-anchors">
+                <a href="/direccion" class="sidebar-anchors-titles">Dirección Nacional</a>
+                <div>
+                    <a href="#">Opcion D.1</a> <!-- le falta los iconos -->
+                    <a href="#">Opcion D.2</a>
+                    <a href="#">Opcion D.3</a>
+                </div>
+                <a href="/produccion" class="sidebar-anchors-titles">Producción</a>
+                <div>
+                    <a href="#">Opcion P.1</a>
+                    <a href="#">Opcion P.2</a>
+                    <a href="#">Opcion P.3</a>
+                </div>
+            </div>
+            <a href="/contacto" class="navbar-contact">Contacto</a>
+        </div>
+    </navbar>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="/" class="logo">
+            <!-- Main Logo -->
+            <img class="logo-one" src="/img/items-logo.png" alt="Logo de Maru Bolatti">
+            <!-- Cambiar logos con el input de la seccion -->
+            <img class="logo-two display-none" src="/img/items-logo-mini.png" alt="Logo de Maru Bolatti">
+        </a>
+
+        <div class="navbar-content">
+            <div class="navbar-anchors display-none"> 
+                <a href="">Producción</a>
+                <a href="">Dirección</a>
+            </div>
+
+            <div>
+                <!-- Responsive Bars -->
+                <button class="button-bars" id="bars" onclick="side_open()"><i class="fa-solid fa-play"></i></button>
+            </div>
+        </div>
+    </div>
 </header>

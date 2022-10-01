@@ -42,6 +42,9 @@ img {
 .display-none {
     display: none;
 }
+.display-flex {
+    display: flex;
+}
 /* Displays */
 .display-responsive {
     display: none!important;
@@ -60,9 +63,124 @@ img {
     }
 }
 
-.espera {
-    text-align: center;
+/** NAVBAR **/
+/* Header */
+.header {
+    /*Header Fixed*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+    z-index: 3;
 }
+@media (min-width: 768px) {
+    .header {
+        padding-top: 2rem;
+    }
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-content {
+    display: flex;
+    justify-content: right;
+    align-items: baseline;
+}
+.navbar-anchors {
+    justify-content: baseline;
+}
+.navbar-anchors a {
+    margin-right: .8rem;
+}
+.nav-active { /* Efectos que se activa cuando se baja la barra pero solo a la barra */
+    background-color: var(--color-white); 
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.63);
+    padding: 0;
+}
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo-one {
+    width: 10rem;
+    margin: 1.2rem .8rem;
+}
+.logo-two {
+    width: 3.3rem;
+    margin: 1rem 1rem;
+}
+@media (min-width: 768px) {
+    .logo-one {
+        width: 18rem;
+        margin: 1.5rem 1rem;
+    }
+    .logo-two {
+        width: 7rem;
+        margin: 1.2rem 2rem;
+    } 
+}
+/* SideBar */
+.sidebar {
+    margin-top: 5rem;
+    height: 80vh;
+    width: 25rem;
+    background-color: red; /* Va transparente */
+    position: fixed!important;
+    right: 0;
+    z-index: 1;
+    overflow: auto;
+}
+.sidebar-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 4rem;
+    text-indent: 2rem;
+}
+.sidebar-info p {
+    margin: .5rem 0 0;
+}
+.sidebar-anchors {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+.sidebar-anchors a {
+    width: 100%;
+    padding: 1rem 0rem;
+    color: var(--color-text);
+    border-bottom: solid 1px var(--color-light-gray);
+}
+.button-bars {
+    background-color: white;
+    border: none;
+    margin: .3rem 1rem 0 0;
+    transform: rotate(180deg); 
+    transition: .5s;
+}
+.button-bars i {
+    font-size: 4rem;
+    color: var(--color-main-blue);
+}
+.button-active i {
+    font-size: 3.5rem;
+    color: var(--color-main-pink);
+}
+.navbar-anchors-active {
+    display: none;
+}
+
+
 /** FOOTER **/
 .footer a {
     font-weight: 700;
