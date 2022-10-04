@@ -2,12 +2,12 @@
 //
 function side_open() {
     document.getElementById("sidebar").style.display = "block";
-    document.getElementById("bars").style.transform = "rotate(90deg)";
+    document.getElementById("bars").style.transform = "rotate(-90deg)";
     document.getElementById("bars").onclick = side_close;
 }
 function side_close() {
     document.getElementById("sidebar").style.display = "none";
-    document.getElementById("bars").style.transform = "rotate(180deg)";
+    document.getElementById("bars").style.transform = "rotate(0deg)";
     document.getElementById("bars").onclick = side_open;
 }
 
@@ -82,3 +82,45 @@ AOS.init({
   mirror: false, // whether elements should animate out while scrolling past them
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
+
+// Bars
+var McButton = document.querySelector("[data=hamburger-menu]");
+var McBar1 = document.querySelector('.McBar1');
+var McBar2 = document.querySelector('.McBar2');
+var McBar3 = document.querySelector('.McBar3');
+
+McButton.addEventListener('click', function() {
+  this.classList.toggle("active");
+  
+  if (McButton.classList.contains("active")) {
+    McBar1.style.top = "50%";
+    McBar3.style.top = "50%";
+    // McBar1.velocity({ top: "50%" }, {duration: 200, easing: "swing"});
+    // McBar3.velocity({ top: "50%" }, {duration: 200, easing: "swing"})
+    // 			.velocity({rotateZ:"90deg"}, {duration: 800, delay: 200, easing: [500,20] });
+    // McButton.velocity({rotateZ:"135deg"}, {duration: 800, delay: 200, easing: [500,20] });
+  } else {
+    // McButton.velocity("reverse");
+	// 	McBar3.velocity({rotateZ:"0deg"}, {duration: 800, easing: [500,20] })
+    // 			.velocity({ top: "100%" }, {duration: 200, easing: "swing"});
+  	// McBar1.velocity("reverse", {delay: 800});
+  }
+});
+
+/*$element.velocity({ 
+    width: "500px",
+    property2: value2
+}, {
+    duration: 400,
+    easing: "swing",
+    queue: "",
+    begin: undefined,
+    progress: undefined,
+    complete: undefined,
+    display: undefined,
+    visibility: undefined,
+    loop: false,
+    delay: false,
+    mobileHA: true
+});*/
+
