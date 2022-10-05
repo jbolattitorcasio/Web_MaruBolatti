@@ -109,28 +109,116 @@ img {
 .logo {
     display: flex;
     align-items: center;
-}
-.logo-one {
-    width: 10rem;
-    margin: 1.2rem .8rem;
-}
-.logo-two {
-    width: 3.3rem;
+    width: 4.5rem;
     margin: 1rem 1rem;
+    transition: .3s ease;
+}
+.logo-active {
+    width: 3.8rem;
 }
 @media (min-width: 768px) {
-    .logo-one {
-        width: 12rem;
-        margin: 1.5rem 1rem;
+    .logo {
+        margin: 1rem 2rem;
     }
-    .logo-two {
-        width: 3.5rem;
-        margin: 1.2rem 2rem;
-    } 
+    .logo-active {
+        margin: 1.8rem 1.8rem;
+    }
 }
+/* Bars */
+.button-bars {
+    position: absolute;
+    top: calc(50% - 1.8rem);
+    right: 1rem;
+    height: 4rem;
+    width: 4rem;
+    transition: .3s ease;
+}
+.button-bars-active {
+    height: 3.5rem;
+    width: 3.5rem;
+}
+@media (min-width: 768px) {
+    .button-bars::before {
+        content: "----------------------";
+        color: #000;
+    }
+}
+.button-bars span {
+    position: absolute;
+    right: 0;
+    height: .4rem;
+    background-color: var(--color-main-pink);
+}
+.button-bars span:nth-child(1) {
+    top: 0;
+    width: 20%;
+}
+.button-bars span:nth-child(2) {
+    top: 25%;
+    width: 60%;
+}
+.button-bars span:nth-child(3) {
+    top: 50%;
+    width: 100%;
+}
+.button-bars span:nth-child(4) {
+    top: 75%;
+    width: 60%;
+}
+.button-bars span:nth-child(5) {
+    top: 100%;
+    width: 20%;
+}
+.bars-animation span:nth-child(1) {
+    animation-name: bars1;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+.bars-animation span:nth-child(2) {
+    animation-name: bars2;
+    animation-duration: 1s;
+}
+.bars-animation span:nth-child(3) {
+    animation-name: bars3;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+.bars-animation span:nth-child(4) {
+    animation-name: bars4;
+    animation-duration: 1s;
+}
+.bars-animation span:nth-child(5) {
+    animation-name: bars5;
+    animation-duration: 1s;
+}
+@keyframes bars1 {
+    50% {width: 100%;}
+    100% {width: 20%;}
+}
+/* @keyframes bars2 {
+    50% {width: 100%;}
+    100% {width: 20%;}
+} */
+@keyframes bars3 {
+    30% {width: 20%;}
+    70% {width: 70%;}
+    100% {width: 60%;}
+    
+}
+/* @keyframes bars4 {
+    50% {width: 100%;}
+    100% {width: 20%;}
+}
+@keyframes bars5 {
+    50% {width: 100%;}
+    100% {width: 20%;}
+} */
+
+
 /* SideBar */
 .sidebar {
-    margin-top: 5rem;
+    margin-top: 10rem;
     height: 80vh;
     width: 25rem;
     background-color: red; /* Va transparente */
@@ -163,56 +251,50 @@ img {
     color: var(--color-text);
     border-bottom: solid 1px var(--color-light-gray);
 }
-.button-bars {
-    background-color: white;
-    border: none;
-    margin: .3rem 1rem 0 0;
-    transition: .5s;
-}
-.button-bars img {
-    width: 2.8rem;
-}
-.button-bars i {
-    font-size: 4rem;
-    color: var(--color-main-blue);
-}
-.button-active i {
-    font-size: 3.5rem;
-    color: var(--color-main-pink);
-}
 .navbar-anchors-active {
     display: none;
 }
 
+/* mc */
 .McButton {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -22px;
-    margin-top: -22px;
-    width: 44px;
-    height: 33px;
+    top: 25%;
+    right: 1.5rem; /*1.5*/
+    width: 4.4rem;
+    height: 3rem;
     cursor: pointer;
 }
 .McButton b {
     position: absolute;
-    left: 0;
-    width: 44px;
-    height: 3px;
-    background-color: black;
+    right: 0;
+    height: 3.3px;
+    background-color: var(--color-main-pink);
 }
 .McBar1 {
     top: 0;
+    width: .7rem;
     transition: 1s ease;
 }
 .McBar2 {
-    top: 50%;
+    top: 25%;
+    width: 1.8rem;
     transition: 1s ease;
 }
 .McBar3 {
-    top: 100%;
+    top: 50%;
+    width: 2.8rem;
     transition: 1s ease;
 }   
+.McBar4 {
+    top: 75%;
+    width: 1.8rem;
+    transition: 1s ease;
+}
+.McBar5 {
+    top: 100%;
+    width: .7rem;
+    transition: 1s ease;
+}
 
 /** FOOTER **/
 .footer a {
