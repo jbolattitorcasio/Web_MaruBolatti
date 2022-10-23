@@ -1,11 +1,3 @@
-function sleep(milliseconds) {
-    const date = Date.now();
-    let currentDate = null;
-    do {
-      currentDate = Date.now();
-    } while (currentDate - date < milliseconds);
-}
-
 const localhost = "http://localhost:3000/"; //Borrar para la produccion
 const host = "https://marubolatti.com/";
 
@@ -35,6 +27,13 @@ if((window.location.href == host + 'direccion') || (window.location.href == loca
     navBackground.style.background = "var(--color-main-blue)";
 }
 
+// FOOTER
+const footer = document.querySelector('.footer');
+if((window.location.href == host) || (window.location.href == localhost)) {
+    footer.style.position = 'absolute';
+} else {
+    footer.style.position = 'static';
+}
 
 
 
