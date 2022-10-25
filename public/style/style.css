@@ -1,8 +1,7 @@
 /* Selection https://www.w3schools.com/howto/howto_css_text_selection.asp */
-/* https://codepen.io/ReGGae/details/NXqjpo */
+/* Cursor https://codepen.io/ReGGae/details/NXqjpo */
 /* Parallax https://youtu.be/6xVMUo0_hu4 */
 /* Hover Photo https://codepen.io/ainalem/pen/QWGNzYm */
-/* Scrollbar https://www.w3schools.com/HOWTO/howto_css_custom_scrollbar.asp */
 /*
 @media only screen and (max-width: 1440px) {
 
@@ -21,6 +20,15 @@
     --color-gray: #dfdfdf;
     --color-white: #fafafa;
 }
+/* Fonts */
+@font-face {
+    font-family: bahnschrift;
+    src: url("/fonts/bahnschrift.ttf");
+}
+@font-face {
+    font-family: toybox;
+    src: url("/fonts/ToyBox.ttf");
+}
 html {
     box-sizing: border-box;
     font-size: 62.5%; /* 1rem = 10px */
@@ -31,19 +39,12 @@ html {
     box-sizing: inherit;
     outline: none;
 }
-@font-face {
-    font-family: bahnschrift;
-    src: url("/fonts/bahnschrift.ttf");
-}
-@font-face {
-    font-family: toybox;
-    src: url("/fonts/ToyBox.ttf");
-}
 body {
     font-family: bahnschrift, helvetica;
     font-size: 1.6rem;
     line-height: 1.6;
 }
+/* Selection */
 ::selection {
     color: var(--color-white);
     background: #a079d0;
@@ -59,6 +60,9 @@ a {
 }
 img {
     max-width: 100%;
+}
+ul {
+    list-style-type: none;
 }
 
 /** UTILITIES **/
@@ -118,6 +122,23 @@ img {
     .display-responsive-reverse {
         display: none;
     }
+}
+.see-more {
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+.see-more:hover {
+    transform: scale(1.1);
+}
+.see-more::before {
+    content: '>';
+    display: inline-block;
+    position: absolute;
+    left: -15%;
+    transition: all .3s ease-in-out;
+}
+.see-more:hover::before {
+    left: 110%;
 }
 
 /** NAVBAR **/
@@ -584,23 +605,11 @@ img {
 .home-about {
     font-size: 2.5rem;
     margin-left: 2rem;
-    position: relative;
     transition: all .3s ease-in-out;
-}
-.home-about:hover {
-    transform: scale(1.1);
 }
 .home-about::before {
-    content: '>';
     color: var(--color-main-purple);
-    display: inline-block;
-    position: absolute;
-    left: -15%;
-    transition: all .3s ease-in-out;
 }   
-.home-about:hover::before {
-    left: 110%;
-}
 @media only screen and (max-width: 1440px) {
     .home {
         margin-top: 20vh;
@@ -687,7 +696,17 @@ img {
     transition: ease 0.3s;
     transform: perspective(1px) translateZ(0);
     position: relative;
+    font-size: 2rem;
 } 
+.about-content li {
+    background: #f4f4f4;
+    padding: 5px;
+    margin: 5px;
+    transition: .3s ease;
+}
+.about-content li a {
+    margin-left: 1rem;
+}
 /* Timeline 'Conoceme' */
 .about-con {
     width: 50%;
@@ -715,10 +734,17 @@ img {
 .about-con:hover .timeline-title {
     color: #fff;
 }
+.about-con:hover .timeline-list li {
+    background: #ece6f3;
+}
 /* Timeline 'Produccion' */
 .about-prod {
     width: 50%;
     background-color: #fff;
+}
+.about-prod li:last-child {
+    width: 15%;
+    background-color: #ffffff;
 }
 .about-prod h4 {
     border-left: var(--color-main-pink) solid 4px;
@@ -740,6 +766,15 @@ img {
     transform: scaleX(1);
 }
 .about-prod:hover .timeline-title {
+    color: #fff;
+}
+.about-prod:hover .timeline-list li {
+    background: #ffe6ee;
+}
+.about-prod:hover li:last-child {
+    background-color: #ff8b8b;
+}
+.about-prod:hover li:last-child a {
     color: #fff;
 }
 /* Timeline 'Direccion' */
@@ -768,6 +803,9 @@ img {
 }
 .about-direc:hover .timeline-title {
     color: #fff;
+}
+.about-direc:hover .timeline-list li {
+    background: #e8f3ff;
 }
 /* About Query */
 @media only screen and (max-width: 1440px) {
