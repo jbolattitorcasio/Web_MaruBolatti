@@ -1,11 +1,16 @@
 <section class="about container">
     <div class="about-first">
 
-        <div class="about-image"></div>
+        <div class="about-image"> {{! Cambiar imagenes }}
+            <div class="image-container">
+                <img src="img/profile-background.jpg" alt="" class="image-circle">
+                <img src="img/profile.png" alt="" class="profile">
+            </div>
+        </div>
 
         <div class="about-content">
-            <h3 class="about-title title">Maru</h3>
-            <p class="about-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque expedita deserunt
+            <h3 class="title">Maru</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque expedita deserunt
                 quidem in qui doloribus aliquam excepturi repudiandae debitis nam non molestias, error est. Odit nobis
                 asperiores exercitationem blanditiis excepturi! Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Officiis quia accusantium, delectus, eius qui optio, laborum maiores aut culpa nemo tempore incidunt
@@ -13,9 +18,6 @@
                 fuga consectetur itaque molestiae laudantium quidem maiores amet quae animi cupiditate, provident, vel
                 unde magni?</p>
         </div>
-
-        <div class="about-image"></div>
-
     </div>
 
     <div class="about-phrase">
@@ -23,82 +25,150 @@
             ea aliquam"</p>
     </div>
 
-    <div class="about-second">
+    <div class="about-timeline">
 
-        <div class="about-image"></div>
-
-        <div class="about-content">
-
-            <div>
-                <h3 class="about-subtitle">Estudios</h3>
-                <div class="about-timeline">
-                    
-                    <div class="about-con">
-                        <h4 class="timeline-title">Terciario</h4> {{! Cambiar subtitulo}}
-                        <ul class="timeline-list">
-                            <li>punto_1</li>
-                            <li>punto____________2</li>
-                            <li>punto_________________________3</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="about-prod">
-                        <h4 class="timeline-title">Produccion</h4>
-                        <ul class="timeline-list">
-                            <li><a href="#">punto_1</a></li>
-                            <li><a href="#">punto____________2</a></li>
-                            <li><a href="#">Punto________________________3</a></li>
-                            <li><a href="/produccion">Ver Más</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="about-direc">
-                        <h4 class="timeline-title">Direccion Nacional</h4>
-                        <ul class="timeline-list">
-                            <li><a href="#">punto_1</a></li>
-                            <li><a href="#">punto____________2</a></li>
-                            <li><a href="#">punto_________________________3</a></li>
-                            <li><a href="/direccion">Ver Más</a></li>
-                        </ul>
-                    </div>
-                    
+        <div class="about-study">
+            <h4 class="title">Trayectoria</h4>
+            <article class="timeline">
+                <a href="/produccion" class="timeline-icon">Producción</a>
+                <div class="timeline-content">
+                    <div><a href="/produccion">2000 > CNN</a></div>
+                    <p>En Nueva York Curso en Relaciones Institucionales de CNN</p>
+                    <div><a href="/produccion">2001 > "PRODUCCIÓN DE IDEAS"</a></div>
+                    <p>fundo la empresa PRODUCCION DE IDEAS destinada a la realización de contenidos mediáticos,
+                        destacándose por su originalidad a la hora de presentar proyectos y realización de objetivos
+                        concretos.</p>
+                    <div><a href=""> 2005 > Cablevisión</a></div>
+                    <p>En el mismo año empezó a trabajar como Productora ejecutiva de Cablevisión y realizo Programas
+                        culturales y de turismo (Idea, producción y postproducción.)</p>
+                    <div><a href="">2006 > Zona Produccion</a></div>
+                    <p>empezó a trabajar en Zona Comunicación en Producción de televisión, Producción comercial,
+                        post-producción y edición. (No se como hilar) programas emitidos por canal 7 como “Km a Km”,
+                        “Mp3, música para el tercer milenio” y el programa emitido por Cultura Activa “Plan A”. Se
+                        mantuvo en esta productora hasta 2010 habiendo realizado un curso de dos años de duración de
+                        Edición de Video</p>
                 </div>
-            </div>
+            </article>
 
-            <div>
-                <h3 class="about-subtitle">Treyectoria</h3>
-                <div class="about-timeline">
-                    
-                    <div class="about-prod">
-                        <h4 class="timeline-title">Produccion</h4>
-                        <ul class="timeline-list">
-                            <li><a href="#">punto_1</a></li>
-                            <li><a href="#">punto____________2</a></li>
-                            <li><a href="#">Punto________________________3</a></li>
-                            <li><a href="/produccion">Ver Más</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="about-direc">
-                        <h4 class="timeline-title">Direccion Nacional</h4>
-                        <ul class="timeline-list">
-                            <li><a href="#">punto_1</a></li>
-                            <li><a href="#">punto____________2</a></li>
-                            <li><a href="#">punto_________________________3</a></li>
-                            <li><a href="/direccion">Ver Más</a></li>
-                        </ul>
-                    </div>
-                    
+            <article class="timeline">
+                <div class="timeline-icon">DIRECCIÓN</div>
+                <div class="timeline-content">
+                    <div><a href="">Actividades previas</a></div>
+                    <p>(/Desde su juventud, Mariela Bolatti se desempeño en actividades culturales etc.)</p>
+                    <div><a href="">2011</a></div>
+                    <p>ingresó a cargo de las Relaciones Institucionales a la Orquesta Nacional de Música Argentina
+                        “Juan de Dios Filiberto”, en ese entonces, Secretaría de Cultura de la Nación. Al poco tiempo,
+                        se encargó de la comunicación y las relaciones institucionales de la Dirección Nacional de las
+                        Artes, donde estuvo a cargo de diversas tareas como:
+                        -La coordinación del área de Comunicación de la Dirección Nacional de Artes y Programación de 9
+                        Organismos Artísticos y 48 Programas Nacionales e internacionales.
+                        -En función de Secretaria de Redacción realizó la Revista de la Dirección Nacional de Artes,
+                        dedicada a difundir todas las actividades impulsadas desde la Dirección, como también a la
+                        profundización de temas relacionados con el ámbito cultural.
+                        -Estuvo a cargo de la producción de material diario televisivo para canal 7, para los programas
+                        “Una Tarde Cualquiera” y “Vivo en Argentina”.
+                        -Desempeñó en tareas de Relaciones Publicas en diferentes ámbitos para la participación del
+                        Organismo en congresos, talleres y actividades del Ministerio.
+                        -Desarrolló eventos extraordinarios en todo el territorio nacional de acuerdo a los objetivos de
+                        la Dirección Nacional de Artes.
+                    </p>
+                    <div><a href="">2014</a></div>
+                    <p>fue asesora de la Dirección de Música y Danza.Algo mas</p>
+                    <div><a href="">2015</a></div>
+                    <p>fue coordinadora general de los Organismos Estables de la Secretaría de Gestión Cultural, donde
+                        desarrollo las siguientes tareas:
+                        -Estimular, difundir y promocionar la música en todas sus manifestaciones apoyando la actividad
+                        de los músicos y creadores argentinos, dentro y fuera del país, y fomentar la cooperación y el
+                        intercambio con organismos nacionales e internacionales.
+                        -Estimular, difundir y promocionar la danza en todas sus manifestaciones a través del apoyo a
+                        coreógrafos y bailarines argentinos dentro y fuera del país, y fomentar la cooperación y el
+                        intercambio con organismos nacionales e internacionales.
+                        -Promover, difundir y apoyar la realización de los estudios musicológicos en todos sus aspectos,
+                        así como su clasificación, investigación, puesta en valor y archivo del patrimonio sonoro
+                        vinculado con las artes musicales y vocales.
+                        -Dirigir y programar las actividades de los organismos estables con dependencia de la DIRECCIÓN
+                        NACIONAL DE ARTES.
+                        -Asistir al Director Nacional de Artes en la programación y difusión de las actividades
+                        musicales y de la danza, a través de los organismos dependientes del MINISTERIO DE CULTURA.
+                        -Coordinar la programación de las actividades artísticas de los organismos estables con
+                        dependencia de la DIRECCIÓN NACIONAL DE ARTES cuya incumbencia artística sea la música y la
+                        danza.
+                        -Coordinar las actividades de formación profesional destinadas a los organismos estables de
+                        música y danza del MINISTERIO DE CULTURA.
+                        -Coordinar el despacho, seguimiento y archivo de la documentación administrativa necesaria para
+                        los requerimientos de los organismos estables de música y de su personal.
+                    </p>
+                    <div><a href="">2016</a></div>
+                    <p>continuó con la organización de las actividades académicas de los elencos estables de música, y
+                        fue la asesora de los mismos para el departamento de relaciones laborales de la Unidad de
+                        Ministro. </p>
+                    <div><a href="">11 de agosto de 2017</a></div>
+                    <p>fue promovida a Directora Nacional de los Organismos Estables, de la dirección homónima,
+                        renovando su cargo en diciembre del 2019.</p>
+                    <div><a href="">Actualidad</a></div>
+                    <p>Actualmente, mantiene su cargo de Directora Nacional de Organismo Estables
+                        se ocupa de la promoción, administración y el desarrollo de los nueve elencos estables de música
+                        y danza.
+                        La Dirección Nacional de Organismos Estables (DNOE) tiene como responsabilidad el programar,
+                        conducir y difundir las actividades de los cuerpos artísticos, en relación a las obras de
+                        creadores argentinos y latinoamericanos; promocionar la música y la danza en todas sus
+                        manifestaciones, y apoyar a las actividades vinculadas llevadas a cabo a nivel federal, como así
+                        también la cooperación y el intercambio con organismos nacionales e internacionales Completar
+                        con más información del cargo actual
+                    </p>
                 </div>
-            </div>
+            </article>
 
+            <article class="timeline">
+                <div class="timeline-icon">OTROS</div>
+                <div class="timeline-content">
+                    <div>1997</div>
+                    <p>Periodista y Locutor periodístico y Profesorado de Periodismo - Matricula N°:0187 en la
+                        Asociación de Comunicadores Sociales (ADECOS)</p>
+                    <div>1998</div>
+                    <p>Titular de Cátedra de Informática Nivel Terciario en el Instituto Superior de Formación Docente
+                        Sagrado Corazón.</p>
+                    <div>2000</div>
+                    <p>En ese mismo año se encargó de la Coordinación del Departamento de Tecnología Educativa en Blanco
+                        High School.</p>
+                    <div>2002 - 2003</div>
+                    <p>estuvo trabajando como Docente Titular en (EGB) Instituto Cardoso.</p>
+                    <div>2005</div>
+                    <p>realizo un Curso de Periodismo Digital que le posibilitaría el acceso como Editora de las
+                        noticias de una plataforma digital que desconozco.</p>
+                </div>
+            </article>
         </div>
+
+        <div class="about-award">
+            <h4 class="title">Premios y Logros</h4>
+            {{!-- <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/f01.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="img/f02.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="img/f03.jpg" alt=""></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div> --}}
+        </div>
+
     </div>
 
-    <div>
-        <a href="/produccion">Producción</a>
-        <a href="/direccion">Dirección</a>
-        <a href="/contacto">Contacto</a>
+    <div class="about-footer">
+        <p>Seguir Viendo:</p>
+        <div class="about-menu">
+            <a class="see-more" href="/produccion">Producción</a>
+            <a class="see-more" href="/direccion">Dirección</a>
+            <a class="see-more" href="/contacto">Contacto</a>
+        </div>
     </div>
 </section>
 

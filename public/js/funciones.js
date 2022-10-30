@@ -34,82 +34,35 @@ if((window.location.href == host) || (window.location.href == localhost)) {
 } else {
     footer.style.position = 'static';
 }
+/*
+//SWIPER
+import Swiper, { Navigation, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
 
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
 
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 
-// const bars = document.getElementById("bars");
-// // Function for the sidebar display and bars animation
-// function side_open() {
-//     // Sidebar display
-//     document.getElementById("sidebar").style.display = "block";
-//     // Bars animation
-//     bars.classList.remove('bars-animation-reverse');
-//     bars.classList.add('bars-animation');
-//     // Change the onclick function
-//     bars.onclick = side_close;
-// }
-// function side_close() {
-//     // Sidebar display
-//     document.getElementById("sidebar").style.display = "none";
-//     //Bars animation
-//     bars.classList.remove('bars-animation')
-//     bars.classList.add('bars-animation-reverse');
-//     //Change the onclick function
-//     bars.onclick = side_open;
-// }
-
-// // Function for the navbar animation and anchors display
-// const navbar = document.querySelector('.header');
-// const navbarAnchors = document.querySelector('.navbar-anchors');
-// const documentWidth = document.body.clientWidth;
-// const logo = document.querySelector('.logo');
-
-// window.onscroll = () => {
-//     if (window.scrollY > 100) {
-//         navbar.classList.add('nav-active');
-//         logo.classList.add('logo-active');
-//         bars.classList.add('button-bars-active')
-
-//         if (documentWidth < 768) {
-//             navbarAnchors.classList.remove('display-none');
-//             navbarAnchors.classList.add('display-flex');
-//         }
-//     } else {
-//         navbar.classList.remove('nav-active');
-//         logo.classList.remove('logo-active');
-//         bars.classList.remove('button-bars-active')
-
-//         if (documentWidth < 768) {
-//             navbarAnchors.classList.add('display-none');
-//             navbarAnchors.classList.remove('display-flex');
-//         }
-//     }
-// }
-
-// // Production and Direction Navbar
-// const host = "https://marubolatti.com/";
-// const localhost = "http://localhost:3000/"; //Borrar para la produccion
-
-// if ((window.location.href == host) || (window.location.href == localhost)) {
-//     document.querySelector('.navbar-anchors a:nth-child(1)').style.color = "#000";
-//     document.querySelector('.navbar-anchors a:nth-child(2)').style.color = "#000";
-// }
-// if ((window.location.href == host + "produccion") || (window.location.href == localhost + "produccion")) {
-//     document.querySelector('.navbar-anchors a:nth-child(1)').classList.add("navbar-prod");
-//     document.querySelector('.button-bars span:nth-child(1)').style.backgroundColor = "var(--color-main-pink)";
-//     document.querySelector('.button-bars span:nth-child(2)').style.backgroundColor = "var(--color-main-pink)";
-//     document.querySelector('.button-bars span:nth-child(3)').style.backgroundColor = "var(--color-main-pink)";
-//     document.querySelector('.button-bars span:nth-child(4)').style.backgroundColor = "var(--color-main-pink)";
-//     document.querySelector('.button-bars span:nth-child(5)').style.backgroundColor = "var(--color-main-pink)";
-// }
-// if ((window.location.href == host + "direccion") || (window.location.href == localhost + "direccion")) {
-//     document.querySelector('.navbar-anchors a:nth-child(2)').classList.add("navbar-direc");
-//     document.querySelector('.button-bars span:nth-child(1)').style.backgroundColor = "var(--color-main-blue)";
-//     document.querySelector('.button-bars span:nth-child(2)').style.backgroundColor = "var(--color-main-blue)";
-//     document.querySelector('.button-bars span:nth-child(3)').style.backgroundColor = "var(--color-main-blue)";
-//     document.querySelector('.button-bars span:nth-child(4)').style.backgroundColor = "var(--color-main-blue)";
-//     document.querySelector('.button-bars span:nth-child(5)').style.backgroundColor = "var(--color-main-blue)";
-// }
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+});
+swiper.slideNext();
+*/
 
 // // AOS Configuration
 // AOS.init();
