@@ -81,3 +81,10 @@ var animation = bodymovin.loadAnimation({
     autoplay: true,
     path: '/js/animations/T_02.json'
 });
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animAbout04'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_04.json'
+});
