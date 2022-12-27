@@ -35,12 +35,25 @@ if((window.location.href == host + 'direccion') || (window.location.href == loca
 }
 
 // FOOTER
+const contactFooter = document.querySelector('.contact-footer');
+
+// Cambiar el localhost por host
 const footer = document.querySelector('.footer');
-if((window.location.href == host) || (window.location.href == localhost)) {
-    footer.style.position = 'absolute';
+if((window.location.href != localhost + 'contacto')) {
+    if((window.location.href == host) || (window.location.href == localhost)) {
+        footer.style.position = 'absolute';
+    } else {
+        footer.style.position = 'static';
+    }
 } else {
-    footer.style.position = 'static';
+    if(window.innerWidth <= 767) {
+        contactFooter.style.position = 'static';
+        contactFooter.style.margin = '7px auto';
+    } else {
+        contactFooter.style.position = 'absolute';
+    }
 }
+
 
 // AOS Configuration
 AOS.init();
