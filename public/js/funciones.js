@@ -67,6 +67,30 @@ AOS.init({
 
 
 // Animation Lottie 
+// Sidebar
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animSidebar01'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/A_02.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animSidebar02'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/A_02.json'
+});
+// Home
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animHome'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/A_01.json'
+});
+// About
 var animation = bodymovin.loadAnimation({
     container: document.getElementById('animAbout01'),
     rederer: 'svg',
