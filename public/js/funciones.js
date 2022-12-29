@@ -125,3 +125,39 @@ var animation = bodymovin.loadAnimation({
     autoplay: true,
     path: '/js/animations/T_04.json'
 });
+// Production
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animProd01'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/A_01.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animProd02'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_01.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animProd03'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_02.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animProd04'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_04.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animProd05'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_04.json'
+});
