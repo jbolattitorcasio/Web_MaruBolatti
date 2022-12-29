@@ -1,90 +1,59 @@
-const bars = document.getElementById("bars");
-// Function for the sidebar display and bars animation
-function side_open() {
-    // Sidebar display
-    document.getElementById("sidebar").style.display = "block";
-    // Bars animation
-    bars.classList.add('bars-animation');
-    // Change the onclick function
-    bars.onclick = side_close;
-}
-function side_close() {
-    // Sidebar display
-    document.getElementById("sidebar").style.display = "none";
-    //Bars animation
-    bars.classList.remove('bars-animation');
-    //Change the onclick function
-    bars.onclick = side_open;
-}
+const localhost = "http://localhost:3000/"; //Borrar para la produccion
+const host = "https://marubolatti.com/";
 
-// Function for the navbar animation and anchors display
-const navbar = document.querySelector('.header');
-const navbarAnchors = document.querySelector('.navbar-anchors');
-const documentWidth = document.body.clientWidth;
-const logo = document.querySelector('.logo');
+// NAVBAR
+const nav = document.querySelector('.nav-main');
+const siteLogo = document.querySelector('.site-logo img');
+const navContainer  = document.querySelector('.nav-container');
+const navMain = document.querySelector('.nav-main');
 
-window.onscroll = () => {
-    if (window.scrollY > 100) {
-        navbar.classList.add('nav-active');
-        logo.classList.add('logo-active');
-        bars.classList.add('button-bars-active')
-
-        if (documentWidth < 768) {
-            navbarAnchors.classList.remove('display-none');
-            navbarAnchors.classList.add('display-flex');
+function opener() {
+    nav.classList.toggle('is-open'); 
+    if(nav.classList.contains('is-open')) {
+        if((window.location.href == host + 'produccion') || (window.location.href == localhost + 'produccion')) {
+            siteLogo.src = "/img/logo-prod.png";
         }
+        if((window.location.href == host + 'direccion') || (window.location.href == localhost + 'direccion')) {
+            siteLogo.src = "/img/logo-direc.png";
+        }
+        if((window.location.href == host + 'contacto') || (window.location.href == localhost + 'contacto')) {
+            siteLogo.src = "/img/logo-bw.png";
+        }
+        navContainer.style.display = "block";
     } else {
-        navbar.classList.remove('nav-active');
-        logo.classList.remove('logo-active');
-        bars.classList.remove('button-bars-active')
-
-        if (documentWidth < 768) {
-            navbarAnchors.classList.add('display-none');
-            navbarAnchors.classList.remove('display-flex');
-        }
+        siteLogo.src = "/img/logo.png";
+        navContainer.style.display = "none";
     }
 }
 
-// // Bars
-// var McButton = document.querySelector("[data=hamburger-menu]");
-// var McBar1 = document.querySelector('.McBar1');
-// var McBar2 = document.querySelector('.McBar2');
-// var McBar3 = document.querySelector('.McBar3');
+// PROD and DIREC Configuration
+if((window.location.href == host + 'produccion') || (window.location.href == localhost + 'produccion')) {
+    navMain.style.background = "var(--color-main-pink)";
+}
+if((window.location.href == host + 'direccion') || (window.location.href == localhost + 'direccion')) {
+    navMain.style.background = "var(--color-main-blue)";
+}
 
-// McButton.addEventListener('click', function() {
-//   this.classList.toggle("active");
-  
-//   if (McButton.classList.contains("active")) {
-//     McBar1.style.left = "-50%";
-//     McBar3.style.left = "-50%";
-//     // McBar1.velocity({ top: "50%" }, {duration: 200, easing: "swing"});
-//     // McBar3.velocity({ top: "50%" }, {duration: 200, easing: "swing"})
-//     // 			.velocity({rotateZ:"90deg"}, {duration: 800, delay: 200, easing: [500,20] });
-//     // McButton.velocity({rotateZ:"135deg"}, {duration: 800, delay: 200, easing: [500,20] });
-//   } else {
-//     // McButton.velocity("reverse");
-// 	// 	McBar3.velocity({rotateZ:"0deg"}, {duration: 800, easing: [500,20] })
-//     // 			.velocity({ top: "100%" }, {duration: 200, easing: "swing"});
-//   	// McBar1.velocity("reverse", {delay: 800});
-//   }
-// });
+// FOOTER
+const contactFooter = document.querySelector('.contact-footer');
 
-// /*$element.velocity({ 
-//     width: "500px",
-//     property2: value2
-// }, {
-//     duration: 400,
-//     easing: "swing",
-//     queue: "",
-//     begin: undefined,
-//     progress: undefined,
-//     complete: undefined,
-//     display: undefined,
-//     visibility: undefined,
-//     loop: false,
-//     delay: false,
-//     mobileHA: true
-// });*/
+// Cambiar el localhost por host
+const footer = document.querySelector('.footer');
+if((window.location.href != localhost + 'contacto')) {
+    if((window.location.href == host) || (window.location.href == localhost)) {
+        footer.style.position = 'absolute';
+    } else {
+        footer.style.position = 'static';
+    }
+} else {
+    if(window.innerWidth <= 767) {
+        contactFooter.style.position = 'static';
+        contactFooter.style.margin = '7px auto';
+    } else {
+        contactFooter.style.position = 'absolute';
+    }
+}
+
 
 // AOS Configuration
 AOS.init();
@@ -109,3 +78,122 @@ AOS.init({
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 });
 
+
+// Animation Lottie 
+// Sidebar
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animSidebar01'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/A_02.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animSidebar02'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/A_02.json'
+});
+// Home
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animHome'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/A_01.json'
+});
+// About
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animAbout01'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_01.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animAbout02'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_02.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animAbout04'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_04.json'
+});
+// Production
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animProd01'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/A_01.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animProd02'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_01.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animProd03'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_02.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animProd04'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_04.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animProd05'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_04.json'
+});
+// Direction
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animDirec01'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/A_01.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animDirec02'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_01.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animDirec03'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_02.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animDirec04'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_04.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animDirec05'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_04.json'
+});

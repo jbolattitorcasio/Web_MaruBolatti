@@ -18,6 +18,13 @@ app.get('/', function (req, res) {
         robots: "index, follow" 
     });
 });
+app.get('/conoceme', function (req, res) {
+    res.render('about', { 
+        title: "Sobre mi - Maru Bolatti", 
+        descrip: "Lorem xyz", 
+        robots: "noindex, follow" 
+    });
+});
 app.get('/direccion', function (req, res) {
     res.render('director', { 
         title: "Dirección Nacional - Maru Bolatti", 
@@ -39,6 +46,7 @@ app.get('/contacto', function (req, res) {
         robots: "noindex, follow" 
     });
 });
+
 
 /* For errors */ 
 // 404 catch-all handler

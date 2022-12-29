@@ -1,44 +1,43 @@
-<header class="header">
-    <!-- Sidebar -->
-    <navbar class="sidebar" style="display: none;" id="sidebar">
-        <!-- Cambiar todo -->
-        <div class="sidebar-info">
-            <div class="sidebar-anchors">
-                <a href="/direccion" class="sidebar-anchors-titles">Dirección Nacional</a>
-                <div>
-                    <a href="#">Opcion D.1</a> <!-- le falta los iconos -->
-                    <a href="#">Opcion D.2</a>
-                    <a href="#">Opcion D.3</a>
-                </div>
-                <a href="/produccion" class="sidebar-anchors-titles">Producción</a>
-                <div>
-                    <a href="#">Opcion P.1</a>
-                    <a href="#">Opcion P.2</a>
-                    <a href="#">Opcion P.3</a>
-                </div>
-            </div>
-            <a href="/contacto" class="navbar-contact">Contacto</a>
-        </div>
-    </navbar>
-
+<header class="site-head">
+    <a href="/" class="site-logo"><img src="/img/logo.png" alt="Logo de Maru Bolatti"></a>
     <!-- Navbar -->
-    <div class="navbar">
-        <a href="/" class="logo"> <img src="/img/items-logo-mini.png" alt="Logo de Maru Bolatti"> </a>
-
-        <div class="navbar-content">
-            <div class="navbar-anchors display-none"> 
-                <a href="">Producción</a>
-                <a href="">Dirección</a>
+    <nav class="nav-main">
+        <div class="nav-toggle">
+            <div class="button-container" onclick="opener()">
+                <div class="bars open">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="bars close">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
             </div>
-
-            <a class="button-bars" id="bars" onclick="side_open()">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
         </div>
+        <div style="display: none;" class="nav-container">
+            <div>
+                <div class="nav-content">
+                    <div id="animSidebar01" class="nav-animation display-responsive"></div>
+                    <div class="nav-info">
+                        <ul>         
+                            <li><a href="/conoceme" data-text="Conoceme">Conoceme</a></li>    
+                            <li><a href="/produccion" data-text="Producción">Producción</a></li>         
+                            <li><a href="/direccion" data-text="Dirección">Dirección</a></li>     
+                            <li><a href="/contacto" data-text="Contacto">Contacto</a></li>   
+                        </ul>
+                    </div>
+                    <div id="animSidebar02" class="nav-animation display-responsive"></div>
+                </div>
+        
+                <div class="nav-media">
+                    <div class="footer-media">
+                        <a href="https://www.instagram.com/maru.bolatti/">.Ig</a>
+                        <a href="#">.In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    </div>
 </header>
