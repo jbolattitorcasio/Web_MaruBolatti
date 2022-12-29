@@ -1655,8 +1655,6 @@ Inspired in cycosta cards: https://codepen.io/cycosta/pen/vYLJxwq?editors=1100 *
     }
 }
 
-
-
 /** PRODUCER **/
 .producer .work-first {
     flex-direction: row-reverse;
@@ -1682,6 +1680,31 @@ Inspired in cycosta cards: https://codepen.io/cycosta/pen/vYLJxwq?editors=1100 *
     background-color: var(--color-main-purple);
 }
 
+/** DIRECTOR **/
+.director .card-l div {
+    background-color: var(--color-main-blue);
+}
+.director .card-p div:nth-child(1)::before {
+    background-color: var(--color-main-blue);
+}
+.director .card-p div:nth-child(1)::after {
+    background-color: var(--color-main-blue);
+}
+.director .card-p div:nth-child(2)::after {
+    background-color: var(--color-main-blue);
+}
+
+
+
+.director-footer a:nth-child(1):after {
+    background-color: var(--color-main-purple);
+}
+.director-footer a:nth-child(2):after {
+    background-color: var(--color-main-pink);
+}
+.director-footer a:nth-child(3):after {
+    background-color: var(--color-main-purple);
+}
 
 /** CONTACT **/
 .contact {

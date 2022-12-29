@@ -161,3 +161,39 @@ var animation = bodymovin.loadAnimation({
     autoplay: true,
     path: '/js/animations/T_04.json'
 });
+// Direction
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animDirec01'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/A_01.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animDirec02'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_01.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animDirec03'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_02.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animDirec04'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_04.json'
+});
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('animDirec05'),
+    rederer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '/js/animations/T_04.json'
+});
