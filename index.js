@@ -61,8 +61,8 @@ app.use(function (err, req, res) {
     res.render('500');
 });
 
-/* Port in console */
-app.listen(app.get('port'), function(){
-    console.log('Started on http://localhost:' +
-    app.get('port'));
-});
+// /* Port in console */
+// app.listen(app.get('port'), function(){
+//     console.log('Started on http://localhost:' +
+//     app.get('port'));
+// });
